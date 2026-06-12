@@ -762,7 +762,7 @@ graph LR
 **The Engineering Answer:** ArgoCD watches a Helm chart repository for changes. When a new version is committed (typically triggered by a passing CI pipeline), ArgoCD detects the drift between the declared desired state and the actual cluster state and reconciles. Flagger handles progressive delivery — automatically shifting traffic from old to new deployment in increments (canary analysis) and rolling back if error rate or latency exceeds defined thresholds.
 
 ```mermaid
-graph LR
+graph TD
     classDef dev fill:#0a0a0a,stroke:#FF2D78,stroke-width:2px,color:#fff
     classDef ci fill:#1a0030,stroke:#9B30FF,stroke-width:2px,color:#fff
     classDef gitops fill:#003d1a,stroke:#00FF41,stroke-width:2px,color:#fff
